@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "title": "MySQL Notes",
+        "text": "Insert MySQL notes here...",
+        "id": "5824"
+    },
+    {
+        "title": "Express JS Notes",
+        "text": "Insert Express JS notes here...",
+        "id": "52fa"
+    },
+    {
+        "title": "Front-end Development Notes",
+        "text": "Insert front-end development notes here...",
+        "id": "35d8"
+    }
+]

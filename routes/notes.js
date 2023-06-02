@@ -40,20 +40,24 @@ notes.post('/', (req, res) => {
   }
 })
 
+// DELETE route for removing previosuly-saved notes
 notes.delete('/:id', (req, res) => {
+  // sets const id to the id of the note-object in question
   const id = req.params.id;
+  // sets note variable to the contents of the db.json file
   let notes = require('../db/db.json');
 
+  // iterates through each entry in db.json and compares its id to the id of the note we're trying to delete
   for (let i = 0; i < notes.length; i++) {
     if (notes[i].id == id) {
+      // if there is a match, remove it from the var
       notes.splice(i, 1);
     }
   }
 
+  // alter the original db.json to match the spliced version of the notes var
   writeToFile('./db/db.json', notes);
   res.json(notes);
-
-  console.log(req.params.id);
 })
 
 // exports notes router
